@@ -1,11 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
-const instance = axios.create({
-  baseURL: 'https://mini-linkedin-backend-wrzl.onrender.com/api',
-  withCredentials: true,
-  headers: {
-    'Content-Type': 'application/json',
-  },
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL, 
+  withCredentials: true,                 
 });
 
-export default instance;
+export default api;
